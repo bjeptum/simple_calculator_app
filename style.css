@@ -2,7 +2,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #1e1e2f;
+  background-color: white;
   color: white;
   display: flex;
   flex-direction: column;
@@ -50,7 +50,7 @@ body {
 }
 
 .btn:hover {
-  background-color: #50506d;
+  background-color: #e40fda;
 }
 
 .operator {
@@ -68,20 +68,24 @@ body {
   font-weight: bold;
 }
 
-
 .equals {
   background-color: #ccc;
   color: black;
-  position: relative;
 }
 
-.equals::before {
-  content: "≡";
-  font-size: 1.5rem;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  border-radius: 4px;
-  padding: 2px 6px;
+/* Responsive layout for small screens */
+@media (max-width: 400px) {
+  .calculator {
+    width: 90%;
+  }
+
+  .btn {
+    padding: 12px;
+    font-size: 1rem;
+  }
+
+  #display {
+    font-size: 1.2rem;
+    height: 50px;
+  }
 }

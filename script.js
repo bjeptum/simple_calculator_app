@@ -20,3 +20,17 @@ function calculateResult() {
     display.value = 'Error';
   }
 }
+
+// Keyboard input support
+document.addEventListener('keydown', function (event) {
+  const key = event.key;
+  if (/[0-9+\-*/.^%]/.test(key)) {
+    appendToDisplay(key);
+  } else if (key === 'Enter') {
+    calculateResult();
+  } else if (key === 'Backspace') {
+    backspace();
+  } else if (key.toLowerCase() === 'c') {
+    clearDisplay();
+  }
+});
